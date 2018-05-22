@@ -49,5 +49,23 @@ namespace Biblioteca.Domain.Tests.Features.Emprestimos
             Action action = () => _emprestimo.Validar();
             action.Should().Throw<InvalidDateException>();
         }
+
+        [Test]
+        public void Domain_Emprestimo_Deveria_Calcular_Multa()
+        {
+            _emprestimo = ObjectMother.GetEmprestimo();
+            _emprestimo.DataDevolucao = DateTime.Now;
+            _emprestimo.CalcularValorMulta(DateTime.Now.AddDays(5));
+            _emprestimo.valorMulta.Should().Be(12.5);
+        }
+
+        [Test]
+        public void Domain_Emprestimo_Deveria_Calcular_Multa_Sem_Multa()
+        {
+            _emprestimo = ObjectMother.GetEmprestimo();
+            _emprestimo.DataDevolucao = DateTime.Now;
+            _emprestimo.CalcularValorMulta(DateTime.Now);
+            _emprestimo.valorMulta.Should().Be(0);
+        }
     }
 }

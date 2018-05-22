@@ -11,8 +11,10 @@ namespace Biblioteca.Application.Features.Livros
 {
     public class LivroService : Service<Livro>
     {
-        public LivroService(IRepository<Livro> repository) : base(repository)
+        ILivroRepository _repository;
+        public LivroService(ILivroRepository repository) : base(repository)
         {
+            _repository = repository;
         }
     }
 }
