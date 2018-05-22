@@ -56,12 +56,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Emprestimos\ObjectMother.cs" />
     <Compile Include="Livros\ObjectMother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Emprestimos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Biblioteca.Domain\Biblioteca.Domain.csproj">
       <Project>{faf680c7-5335-4ff4-b02a-45498f18b526}</Project>

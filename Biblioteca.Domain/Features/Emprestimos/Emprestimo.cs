@@ -16,7 +16,14 @@ namespace Biblioteca.Domain.Features.Emprestimos
 
         public override void Validar()
         {
-            throw new NotImplementedException();
+            if (Cliente.Length < 4)
+                throw new InvalidCaractersException();
+
+            if (livro.Disponibilidade == false)
+                throw new InvalidAvailabilityException();
+
+            if (DataDevolucao < DateTime.Now)
+                throw new InvalidDateException();
         }
     }
 }

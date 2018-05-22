@@ -44,9 +44,10 @@
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Exceptions\IdentifierUndefinedException.cs" />
-    <Compile Include="Exceptions\UnsupportedOperationException.cs" />
     <Compile Include="Features\Emprestimos\Emprestimo.cs" />
-    <Compile Include="Features\Livros\InvalidCaractersException.cs" />
+    <Compile Include="Exceptions\InvalidCaractersException.cs" />
+    <Compile Include="Features\Emprestimos\InvalidAvailabilityException.cs" />
+    <Compile Include="Features\Emprestimos\InvalidDateException.cs" />
     <Compile Include="Features\Livros\InvalidVolumeException.cs" />
     <Compile Include="Features\Livros\Livro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
