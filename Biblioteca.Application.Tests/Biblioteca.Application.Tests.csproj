@@ -80,15 +80,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Features\Emprestimos\EmprestimoServiceTests.cs" />
     <Compile Include="Features\Livros\LivroServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Emprestimos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Biblioteca.Application\Biblioteca.Application.csproj">
       <Project>{17858BBA-CA19-4DF5-986E-2B41235B8A3D}</Project>

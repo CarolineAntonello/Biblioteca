@@ -41,13 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\Service.cs" />
+    <Compile Include="Features\Emprestimos\EmprestimoService.cs" />
+    <Compile Include="Features\Emprestimos\IEmprestimoRepository.cs" />
     <Compile Include="Features\Livros\ILivroRepository.cs" />
     <Compile Include="Features\Livros\LivroService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Emprestimos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Biblioteca.Domain\Biblioteca.Domain.csproj">
       <Project>{FAF680C7-5335-4FF4-B02A-45498F18B526}</Project>
