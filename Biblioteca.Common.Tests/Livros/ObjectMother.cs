@@ -87,5 +87,34 @@ namespace Biblioteca.Common.Tests.Livros
                 Disponibilidade = true,
             };
         }
+
+        public static List<Livro> GetLivros()
+        {
+            return new List<Livro>
+            {
+                new Livro
+                {
+                    Id = 1,
+                    Autor = "Alberto",
+                    Tema = "Biografia",
+                    Titulo = "Minha História",
+                    Volume = 1,
+                    DataPublicacao = DateTime.Now.AddDays(-200),
+                    Disponibilidade = true,
+                },
+
+                new Livro
+                {
+                    Id = 2,
+                    Autor = "Joaquim",
+                    Tema = "Biografia",
+                    Titulo = "Minha História",
+                    Volume = 1,
+                    DataPublicacao = DateTime.Now.AddDays(-500),
+                    Disponibilidade = true,
+                },
+
+            };
+        }
     }
 }

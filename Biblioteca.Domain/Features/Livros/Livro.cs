@@ -31,8 +31,8 @@ namespace Biblioteca.Domain.Features.Livros
             if (Volume <= 0)
                 throw new InvalidVolumeException();
 
-            if (Id <= 0)
-                throw new IdentifierUndefinedException();
+            //if (Id <= 0)
+            //    throw new IdentifierUndefinedException();
 
         }
     }

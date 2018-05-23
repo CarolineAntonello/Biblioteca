@@ -52,13 +52,13 @@ namespace Biblioteca.Domain.Tests.Features.Livros
             action.Should().Throw<InvalidVolumeException>();
         }
 
-        [Test]
-        public void Domain_Livro_Nao_Deveria_Aceitar_Id_Menor_Que_0()
-        {
-            _livro = ObjectMother.GetLivro();
-            Action action = () => _livro.Validar();
-            action.Should().Throw<IdentifierUndefinedException>();
-        }
+        //[Test]
+        //public void Domain_Livro_Nao_Deveria_Aceitar_Id_Menor_Que_0()
+        //{
+        //    _livro = ObjectMother.GetLivro();
+        //    Action action = () => _livro.Validar();
+        //    action.Should().Throw<IdentifierUndefinedException>();
+        //}
 
     }
 }
