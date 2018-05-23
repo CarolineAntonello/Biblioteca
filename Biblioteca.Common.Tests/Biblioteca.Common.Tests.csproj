@@ -56,6 +56,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Base\BaseSqlTest.cs" />
     <Compile Include="Emprestimos\ObjectMother.cs" />
     <Compile Include="Livros\ObjectMother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +66,10 @@
     <ProjectReference Include="..\Biblioteca.Domain\Biblioteca.Domain.csproj">
       <Project>{faf680c7-5335-4ff4-b02a-45498f18b526}</Project>
       <Name>Biblioteca.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Infra\Biblioteca.Infra.csproj">
+      <Project>{CDCE4522-CE38-49DD-8514-C3B3C3171CB7}</Project>
+      <Name>Biblioteca.Infra</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

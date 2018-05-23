@@ -60,4 +60,7 @@
     <Folder Include="dbo" />
     <Folder Include="dbo\tables" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\tables\TBLivro.sql" />
+  </ItemGroup>
 </Project>

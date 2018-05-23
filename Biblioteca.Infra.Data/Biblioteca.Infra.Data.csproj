@@ -40,7 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Feature\Emprestimos\EmprestimoSQLRepository.cs" />
+    <Compile Include="Feature\Livros\LivroSQLRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Application\Biblioteca.Application.csproj">
+      <Project>{17858BBA-CA19-4DF5-986E-2B41235B8A3D}</Project>
+      <Name>Biblioteca.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Domain\Biblioteca.Domain.csproj">
+      <Project>{FAF680C7-5335-4FF4-B02A-45498F18B526}</Project>
+      <Name>Biblioteca.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Infra\Biblioteca.Infra.csproj">
+      <Project>{CDCE4522-CE38-49DD-8514-C3B3C3171CB7}</Project>
+      <Name>Biblioteca.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

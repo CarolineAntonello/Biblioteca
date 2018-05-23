@@ -71,10 +71,33 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Feature\Livros\LivroSqlRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Feature\Biblioteca\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Application\Biblioteca.Application.csproj">
+      <Project>{17858BBA-CA19-4DF5-986E-2B41235B8A3D}</Project>
+      <Name>Biblioteca.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Common.Tests\Biblioteca.Common.Tests.csproj">
+      <Project>{D4DE6DC2-BFDA-4B53-9B6D-434ECA81822A}</Project>
+      <Name>Biblioteca.Common.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Domain\Biblioteca.Domain.csproj">
+      <Project>{FAF680C7-5335-4FF4-B02A-45498F18B526}</Project>
+      <Name>Biblioteca.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Infra.Data\Biblioteca.Infra.Data.csproj">
+      <Project>{82B3C2A1-8FCB-4B08-BAA7-C72896083E6B}</Project>
+      <Name>Biblioteca.Infra.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
