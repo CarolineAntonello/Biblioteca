@@ -13,8 +13,10 @@ namespace Biblioteca.Domain.Features.Emprestimos
         public string Cliente;
         public Livro livro;
         public DateTime DataDevolucao;
+        public long LivroId;
         public double valorMulta;
 
+       
         public override void Validar()
         {
             if (Cliente.Length < 4)
@@ -25,6 +27,7 @@ namespace Biblioteca.Domain.Features.Emprestimos
 
             if (DataDevolucao < DateTime.Now)
                 throw new InvalidDateException();
+            
         }
 
         public void CalcularValorMulta(DateTime DataDeHoje)

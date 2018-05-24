@@ -71,6 +71,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Feature\Biblioteca\EmprestimoSqlRepositoryTests.cs" />
     <Compile Include="Feature\Livros\LivroSqlRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,9 +79,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Feature\Biblioteca\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Biblioteca.Application\Biblioteca.Application.csproj">
       <Project>{17858BBA-CA19-4DF5-986E-2B41235B8A3D}</Project>

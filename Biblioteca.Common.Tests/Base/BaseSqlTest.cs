@@ -17,7 +17,7 @@ namespace Biblioteca.Common.Tests.Base
 
         private const string INSERT = @"
                         DECLARE @dateNowMoreDays DateTime;
-                        DECLARE @ProdutoId INT
+                        DECLARE @LivroId INT
 
                         SELECT  @dateNowMoreDays = DATEADD(day, 30, GETDATE())
 
@@ -28,18 +28,17 @@ namespace Biblioteca.Common.Tests.Base
                                             DataPublicacao, 
                                             Disponibilidade)
 
-                        VALUES('Teste', 'Livro de testes', 'Joaquim José', 1, GETDATE(), 1)";
+                        VALUES('Teste', 'Livro de testes', 'Joaquim José', 1, GETDATE(), 1)
 
-               //         SET @ProdutoId = @@IDENTITY
+                        SET @LivroId = @@IDENTITY
 
-               //         INSERT INTO TBVenda (ProdutoId, Cliente, Quantidade, Lucro)         
-			            //VALUES (@ProdutoId, 'Vinicius', 2, 2);";
+                        INSERT INTO TBEmprestimo (Cliente, DataDevolucao, LivroId)         
+			            VALUES ('Caroline', GETDATE(), @LivroId);";
 
         public static void SeedDatabase()
         {
-            //Db.Update(RECREATE_EMPRESTIMO_TABLE);
+            Db.Update(RECREATE_EMPRESTIMO_TABLE);
             Db.Update(RECREATE_LIVRO_TABLE);
-
             Db.Update(INSERT);
         }
     }

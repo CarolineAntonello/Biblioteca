@@ -86,9 +86,7 @@ namespace Biblioteca.Infra.Data.Feature.Livros
             return livro;
         }
 
-        /// <summary>
-        /// Cria um objeto Customer baseado no DataReader.
-        /// </summary>
+        
         private static Func<IDataReader, Livro> Make = reader =>
            new Livro
            {

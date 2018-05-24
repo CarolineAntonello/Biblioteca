@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[TBEmprestimo]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Cliente] NCHAR(50) NOT NULL, 
+    [DataDevolucao] DATETIME NOT NULL, 
+    [LivroId] INT NOT NULL, 
+    CONSTRAINT [FK_TBEmprestimo_TBLivro] FOREIGN KEY (LivroId) REFERENCES TBLivro(Id) ON DELETE CASCADE
+)

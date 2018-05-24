@@ -8,8 +8,6 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Biblioteca.Infra.Data.Tests.Feature.Livros
 {
@@ -66,6 +64,14 @@ namespace Biblioteca.Infra.Data.Tests.Feature.Livros
             _repository.Excluir(_livro.Id);
             Livro liv = _repository.GetById(_livro.Id);
             liv.Should().BeNull();
+        }
+
+        [Test]
+        public void Repository_Livro_Sql_GetById_ShouldBeOk()
+        {
+            _livro = ObjectMother.GetLivroComId();
+            _repository.GetById(_livro.Id);
+            _livro.Id.Should().BeGreaterThan(0);
         }
 
         [Test]
